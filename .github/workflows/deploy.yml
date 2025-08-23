@@ -6,15 +6,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy via SSH (rsync)
-        uses: easingthemes/ssh-deploy@v5
+
+      - name: Upload files via SCP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          REMOTE_HOST: ${{ secrets.H_HOST }}
-          REMOTE_USER: ${{ secrets.H_USER }}
-          REMOTE_PORT: 65002
-          SSH_PRIVATE_KEY: ${{ secrets.H_SSH_KEY }}
-          SOURCE: .
-          TARGET: ${{ secrets.H_PATH }}
-          ARGS: "-rlgoDzvc --delete"
-          EXCLUDE: ".git/, .github/"
-          REMOTE_CMD: "mkdir -p ${{ secrets.H_PATH }}"
+          host:     ${{ secrets.H_HOST }}
+          username: ${{ secrets.H_USER }}
+          port:     65002
+          key:      ${{ secrets.H_SSH_KEY }}
+          source:   "."
+          target:   ${{ secrets.H_PATH }}
+          overwrite: true
+          rm: true
+          strip_components: 0
+          exclude: |
+            .git/*
+            .github/*
+
+      - name: Fix permissions (optional)
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host:     ${{ secrets.H_HOST }}
+          username: ${{ secrets.H_USER }}
+          port:     65002
+          key:      ${{ secrets.H_SSH_KEY }}
+          script: |
+            chmod -R u+rwX,go+rX ${{ secrets.H_PATH }}
