@@ -1,0 +1,17 @@
+name: Deploy static site
+on: { push: { branches: [main] } }
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rsync to target
+        uses: burnett01/rsync-deployments@6.0
+        with:
+          switches: -avz --delete
+          path: .
+          remote_path: ${{ secrets.H_PATH }}   # e.g. /home/u123/public_html
+          remote_host: ${{ secrets.H_HOST }}   # e.g. 123.45.67.89
+          remote_user: ${{ secrets.H_USER }}   # e.g. u123
+          remote_key: ${{ secrets.H_SSH_KEY }} # private key
