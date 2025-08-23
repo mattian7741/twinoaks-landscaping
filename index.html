@@ -3,61 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Twin Oaks Landscaping | Professional Lawn Care in Lower & Central Bucks County</title>
-  <meta name="description" content="On‑time, professional lawn care and property maintenance in Lower & Central Bucks County. Meticulous cleanup. Free same‑day estimates. Call/Text 267‑397‑7850." />
-  <meta name="theme-color" content="#4a6f2a" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234a6f2a'/%3E%3Cpath d='M20 40c8-2 10-10 12-18 2 8 4 16 12 18-8 2-10 10-12 18-2-8-4-16-12-18z' fill='%23d1b287'/%3E%3C/svg%3E">
-
+  <title>Twin Oaks Landscaping — v2</title>
+  <meta name="description" content="Twin Oaks Landscaping — v2 — Reliable, clean, and professional lawn care and landscaping." />
+  <meta property="og:title" content="Twin Oaks Landscaping — v2" />
+  <meta property="og:description" content="Reliable, clean, and professional lawn care and landscaping." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#165a37" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23165a37'/%3E%3Cpath d='M20 40c8-2 10-10 12-18 2 8 4 16 12 18-8 2-10 10-12 18-2-8-4-16-12-18z' fill='%23fff'/%3E%3C/svg%3E" />
   <style>
-    :root{--bg:#f7f6f2;--primary:#4a6f2a;--accent:#8bb174;--brown:#946f3c;--text:#1f2a1f;--muted:#5c6b5c}
-    html,body{height:100%} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.5;color:var(--text);background:var(--bg)}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
+    :root{--bg:#0b2f22;--primary:#165a37;--accent:#a8e6a2;--text:#ecf3ee;--muted:#cfe7d4}
+    html,body{height:100%}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;line-height:1.5;color:var(--text);background:linear-gradient(180deg,var(--bg),#123b29)}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
     header{display:flex;justify-content:space-between;align-items:center;gap:16px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
-    .brand img{height:54px;width:auto}
-    .cta{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{padding:10px 16px;border-radius:999px;border:1px solid rgba(0,0,0,.08);background:#fff;color:var(--text);text-decoration:none;font-weight:600}
-    .btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)} .btn:hover{transform:translateY(-1px)}
-    main{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:34px 0}
-    .hero h1{font-size:clamp(28px,5vw,46px);margin:0 0 10px;color:var(--primary)}
-    .hero p{color:var(--muted);margin:0 0 16px}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}
-    .chip{background:#e9f2e5;color:var(--primary);border:1px solid #d6e5d0;padding:6px 10px;border-radius:999px;font-size:14px}
-    .card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;overflow:hidden}
+    .brand .logo{width:40px;height:40px;border-radius:12px;background:var(--primary);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .brand .logo svg{width:26px;height:26px}
+    .cta{display:flex;gap:10px}
+    .btn{padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:var(--text);text-decoration:none;font-weight:600;backdrop-filter: blur(8px)}
+    .btn.primary{background:var(--primary);border-color:transparent}
+    .btn:hover{transform:translateY(-1px)}
+    main{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:38px 0}
+    .hero h1{font-size:clamp(28px,5vw,48px);margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 20px}
+    .chip{background:rgba(168,230,162,.15);color:var(--accent);border:1px solid rgba(168,230,162,.3);padding:6px 10px;border-radius:999px;font-size:14px}
+    .card{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.12);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden}
     .card img{width:100%;height:100%;object-fit:cover;display:block}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    .info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
-    .info .ibox{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:12px}
-    .services{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:18px}
-    blockquote{margin:0;padding:14px 16px;border-left:4px solid var(--brown);background:#fcfbf9;color:#3a3a3a;border-radius:8px}
-    footer{margin-top:30px;color:#455245;font-size:14px} a{color:var(--primary)}
+    .info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+    .info .ibox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px}
+    footer{margin-top:30px;color:#cfe7d4;font-size:14px;opacity:.9}
+    a{color:var(--accent)}
     @media (max-width:900px){main{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.info{grid-template-columns:1fr 1fr}}
     @media (max-width:560px){.grid{grid-template-columns:1fr}.info{grid-template-columns:1fr}}
   </style>
-
-  <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Twin Oaks Landscaping",
-    "image": "https://twinoaksods.com/assets/logo.png",
-    "telephone":"+1-267-397-7850",
-    "email":"info@twinoaksods.com",
-    "url":"https://twinoaksods.com",
-    "address":{"@type":"PostalAddress","addressLocality":"Lower & Central Bucks County","addressRegion":"PA","addressCountry":"US"},
-    "areaServed":"Lower and Central Bucks County",
-    "openingHours":"Mo-Sa 08:00-18:00",
-    "priceRange":"$",
-    "description":"On‑time, professional lawn care and property maintenance with meticulous cleanup. Free same‑day estimates.",
-    "serviceOffered":[
-      {"@type":"Service","name":"Weekly lawn cutting"},
-      {"@type":"Service","name":"Tree cutting, trimming & maintenance"},
-      {"@type":"Service","name":"Snow removal"},
-      {"@type":"Service","name":"Fall & spring cleanup, leaf removal"},
-      {"@type":"Service","name":"Mulch, rock, beds, hedge trimming, weeding"},
-      {"@type":"Service","name":"Hardscaping (via subcontractor)"}
-    ]
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Twin Oaks Landscaping — v2",
+    "url": "https://example.com",
+    "telephone": "+1-555-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Your City",
+      "addressRegion": "Your State",
+      "postalCode": "00000",
+      "addressCountry": "US"
+    },
+    "areaServed": "Your County",
+    "image": "",
+    "description": "Reliable, clean, and professional lawn care and landscaping."
   }
   </script>
 </head>
@@ -77,28 +74,31 @@
 
     <main>
       <section class="hero">
-        <h1>On‑time, professional lawn care—every visit.</h1>
-        <p>Locally owned in Bucks County, Twin Oaks delivers reliable weekly mowing, tree care, and seasonal cleanups—with meticulous cleanup and clear communication. Free same‑day estimates.</p>
+        <h1>Professional lawn care—on time, spotless, and built to last.</h1>
+        <p>Locally owned in <strong>Lower & Central Bucks County</strong>. We show up when we say we will, clean up like we were never there, and deliver results you’ll notice after the first visit. Free same‑day estimates.</p>
+
         <div class="badges">
           <span class="chip">Locally Owned</span>
-          <span class="chip">On‑Time Promise</span>
+          <span class="chip">On‑Time Guarantee</span>
           <span class="chip">Meticulous Cleanup</span>
           <span class="chip">Easy Online Scheduling</span>
         </div>
+
         <div class="cta">
           <a class="btn primary" href="tel:+12673977850">📞 (267) 397‑7850</a>
           <a class="btn" href="sms:+12673977850">💬 Text Us</a>
           <a class="btn" href="mailto:info@twinoaksods.com">✉️ info@twinoaksods.com</a>
+          <a class="btn" href="/twin-oaks.vcf" download>📇 Save Contact</a>
         </div>
+
         <div class="info">
           <div class="ibox"><strong>Hours</strong><br>Mon–Sat 8am–6pm</div>
           <div class="ibox"><strong>Service Area</strong><br>Lower & Central Bucks County</div>
           <div class="ibox"><strong>Estimates</strong><br>Free • Same‑day available • Referral discounts</div>
         </div>
       </section>
-
       <aside>
-        <div class="card" aria-label="Project image">
+        <div class="card" aria-label="Project images">
           <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop" alt="Green landscaped yard with trees" />
         </div>
         <div class="grid">
@@ -109,33 +109,21 @@
       </aside>
     </main>
 
-    <section id="services" class="services">
-      <h2>Services</h2>
-      <ul>
-        <li>Weekly lawn cutting (residential & commercial)</li>
-        <li>Tree cutting, trimming & maintenance</li>
-        <li>Snow removal</li>
-        <li>Fall & spring cleanup, leaf removal</li>
-        <li>Mulch, rock installation, garden beds, hedge trimming, weeding</li>
-        <li>Hardscaping through trusted partners</li>
-      </ul>
-      <p style="color:var(--muted);margin:.5rem 0 0">Transparent note: we are not state‑licensed contractors.</p>
-    </section>
-
     <section class="container" style="padding-top:10px">
       <h2>What neighbors say</h2>
       <blockquote>
-        “Twin Oaks made the whole process effortless. They arrived exactly when promised, left our yard spotless, and the attention to detail was beyond what we expected. We signed up for weekly service right away.”
+        “They arrived exactly when promised, left our yard spotless, and the attention to detail was obvious. We signed up for weekly service on the spot.”
         <br>— <strong>Kelly R., Yardley</strong>
       </blockquote>
     </section>
-
     <footer>
       © <span id="y"></span> Twin Oaks Landscaping ·
+      <a href="/twin-oaks.vcf" download>📇 Save Contact</a> ·
       <a href="tel:+12673977850">(267) 397‑7850</a> ·
       <a href="mailto:info@twinoaksods.com">info@twinoaksods.com</a> · Bucks County, PA
     </footer>
   </div>
+
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
