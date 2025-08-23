@@ -3,66 +3,158 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Twin Oaks Landscaping — v2</title>
-  <meta name="description" content="Twin Oaks Landscaping — v2 — Reliable, clean, and professional lawn care and landscaping." />
-  <meta property="og:title" content="Twin Oaks Landscaping — v2" />
-  <meta property="og:description" content="Reliable, clean, and professional lawn care and landscaping." />
+  <title>Twin Oaks Landscaping — Bucks County PA</title>
+  <meta name="description" content="Professional lawn care & property maintenance in Lower & Central Bucks County. On‑time service, meticulous cleanup, easy scheduling. Free same‑day estimates." />
+  <meta name="theme-color" content="#4a6f2a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234a6f2a'/%3E%3Cpath d='M20 40c8-2 10-10 12-18 2 8 4 16 12 18-8 2-10 10-12 18-2-8-4-16-12-18z' fill='%23946f3c'/%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Twin Oaks Landscaping — Bucks County PA" />
+  <meta property="og:description" content="On‑time lawn care with meticulous cleanup. Free same‑day estimates." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#165a37" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23165a37'/%3E%3Cpath d='M20 40c8-2 10-10 12-18 2 8 4 16 12 18-8 2-10 10-12 18-2-8-4-16-12-18z' fill='%23fff'/%3E%3C/svg%3E" />
+  <meta property="og:url" content="https://twinoaksods.com" />
+
   <style>
-    :root{--bg:#0b2f22;--primary:#165a37;--accent:#a8e6a2;--text:#ecf3ee;--muted:#cfe7d4}
+    /* ====== THEME ====== */
+    :root{
+      --green:#4a6f2a;      /* primary */
+      --green-2:#8bb174;    /* accent */
+      --brown:#946f3c;      /* brand brown */
+      --beige:#f6f4ee;      /* paper */
+      --white:#ffffff;
+      --ink:#1f261c;
+      --muted:#5c6b5c;
+      --ring: 0 0 0 3px rgba(74,111,42,.25);
+      --radius: 16px;
+    }
+    /* ====== RESET ====== */
+    *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;line-height:1.5;color:var(--text);background:linear-gradient(180deg,var(--bg),#123b29)}
-    .container{max-width:1000px;margin:0 auto;padding:24px}
-    header{display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
-    .brand .logo{width:40px;height:40px;border-radius:12px;background:var(--primary);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 100% 0, #e9e4d9 0%, transparent 60%),
+        radial-gradient(1200px 600px at 0 100%, #e7efe1 0%, transparent 60%),
+        var(--beige);
+    }
+    a{color:var(--green);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    /* ====== HEADER ====== */
+    .bar{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter:saturate(1.2) blur(6px);
+      background:rgba(255,255,255,.85);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+    .brand .logo{
+      width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+      background:conic-gradient(from 210deg at 50% 50%, var(--green), #2d4a17);
+      box-shadow:0 8px 24px rgba(0,0,0,.15);
+    }
     .brand .logo svg{width:26px;height:26px}
-    .cta{display:flex;gap:10px}
-    .btn{padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:var(--text);text-decoration:none;font-weight:600;backdrop-filter: blur(8px)}
-    .btn.primary{background:var(--primary);border-color:transparent}
-    .btn:hover{transform:translateY(-1px)}
-    main{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:38px 0}
-    .hero h1{font-size:clamp(28px,5vw,48px);margin:0 0 10px}
-    .hero p{color:var(--muted);margin:0 0 18px}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 20px}
-    .chip{background:rgba(168,230,162,.15);color:var(--accent);border:1px solid rgba(168,230,162,.3);padding:6px 10px;border-radius:999px;font-size:14px}
-    .card{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.12);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden}
-    .card img{width:100%;height:100%;object-fit:cover;display:block}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    .info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
-    .info .ibox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px}
-    footer{margin-top:30px;color:#cfe7d4;font-size:14px;opacity:.9}
-    a{color:var(--accent)}
-    @media (max-width:900px){main{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.info{grid-template-columns:1fr 1fr}}
-    @media (max-width:560px){.grid{grid-template-columns:1fr}.info{grid-template-columns:1fr}}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      padding:10px 16px;border-radius:999px;border:1px solid rgba(0,0,0,.08);
+      background:var(--white);color:var(--ink);font-weight:600;
+    }
+    .btn.primary{background:var(--green);color:#fff;border-color:var(--green)}
+    .btn:focus-visible{outline:none;box-shadow:var(--ring)}
+
+    /* ====== HERO ====== */
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;
+      padding:42px 0 16px;
+    }
+    .kicker{color:var(--brown);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(30px,5.4vw,56px);line-height:1.08;margin:.2rem 0 .6rem;color:#24331c}
+    .lead{color:var(--muted);font-size:clamp(16px,2vw,18px)}
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+    .pill{background:#eef4ea;border:1px solid #d6e6cf;color:#29421a;border-radius:999px;padding:6px 10px;font-size:14px}
+    .heroCard{
+      background:linear-gradient(165deg, #fff, #faf7f1);
+      border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.08)
+    }
+    .heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .heroGrid img{height:160px;object-fit:cover}
+    .heroNote{padding:12px 14px;color:#3a3a3a;border-top:1px dashed rgba(0,0,0,.1);font-size:14px}
+
+    /* ====== SERVICE STRIP ====== */
+    .strip{
+      margin:26px 0;border-radius:var(--radius);
+      background:linear-gradient(90deg, #4a6f2a 0%, #6b8d46 100%);
+      color:#fff; display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center;
+      padding:16px 18px;
+    }
+    .strip b{color:#fff}
+    .strip .actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff}
+
+    /* ====== SECTIONS ====== */
+    section{scroll-margin-top:90px}
+    .section{padding:10px 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:16px}
+    .card h3{margin:.4rem 0 .2rem;font-size:18px;color:#23311b}
+    .card p{margin:0;color:#4a564a;font-size:15px}
+    .icon{width:24px;height:24px;color:var(--green)}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .strip{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:560px){.cards{grid-template-columns:1fr}}
+
+    /* ====== QUOTE & FOOTER ====== */
+    blockquote{
+      margin:0;padding:16px;border-left:4px solid var(--brown);background:#fcfbf7;border-radius:8px
+    }
+    footer{margin:30px 0 10px;color:#4b5a4b;font-size:14px}
+    .footRow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .small{font-size:12px;color:#6b766b}
   </style>
+
+  <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Twin Oaks Landscaping — v2",
-    "url": "https://example.com",
-    "telephone": "+1-555-123-4567",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Your City",
-      "addressRegion": "Your State",
-      "postalCode": "00000",
-      "addressCountry": "US"
-    },
-    "areaServed": "Your County",
-    "image": "",
-    "description": "Reliable, clean, and professional lawn care and landscaping."
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Twin Oaks Landscaping",
+    "url":"https://twinoaksods.com",
+    "telephone":"+1-267-397-7850",
+    "email":"info@twinoaksods.com",
+    "image":"https://twinoaksods.com/assets/logo.png",
+    "address":{"@type":"PostalAddress","addressLocality":"Lower & Central Bucks County","addressRegion":"PA","addressCountry":"US"},
+    "areaServed":"Lower and Central Bucks County",
+    "openingHours":"Mo-Sa 08:00-18:00",
+    "priceRange":"$",
+    "serviceOffered":[
+      {"@type":"Service","name":"Weekly lawn cutting"},
+      {"@type":"Service","name":"Tree cutting, trimming & maintenance"},
+      {"@type":"Service","name":"Snow removal"},
+      {"@type":"Service","name":"Fall & spring cleanup, leaf removal"},
+      {"@type":"Service","name":"Mulch, rock, garden beds, hedge trimming, weeding"},
+      {"@type":"Service","name":"Hardscaping (via subcontractor)"}
+    ]
   }
   </script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand" aria-label="Twin Oaks Landscaping">
-        <img src="/assets/logo.png" alt="Twin Oaks Landscaping logo" onerror="this.style.display='none'">
+  <!-- ====== STICKY BAR ====== -->
+  <div class="bar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="26" fill="#8bb174"/><path d="M20 40c8-2 10-10 12-18 2 8 4 16 12 18-8 2-10 10-12 18-2-8-4-16-12-18z" fill="#fff"/>
+          </svg>
+        </div>
         <span>Twin Oaks Landscaping</span>
       </div>
       <nav class="cta">
@@ -70,57 +162,137 @@
         <a class="btn" href="/twin-oaks.vcf" download>📇 Save Contact</a>
         <a class="btn primary" href="tel:+12673977850">Call / Text</a>
       </nav>
-    </header>
+    </div>
+  </div>
 
-    <main>
-      <section class="hero">
-        <h1>Professional lawn care—on time, spotless, and built to last.</h1>
-        <p>Locally owned in <strong>Lower & Central Bucks County</strong>. We show up when we say we will, clean up like we were never there, and deliver results you’ll notice after the first visit. Free same‑day estimates.</p>
-
-        <div class="badges">
-          <span class="chip">Locally Owned</span>
-          <span class="chip">On‑Time Guarantee</span>
-          <span class="chip">Meticulous Cleanup</span>
-          <span class="chip">Easy Online Scheduling</span>
+  <!-- ====== HERO ====== -->
+  <div class="container">
+    <section class="hero">
+      <div>
+        <div class="kicker">Lower & Central Bucks County</div>
+        <h1>On‑time lawn care with meticulous cleanup.</h1>
+        <p class="lead">
+          Professional mowing, tree care, seasonal cleanups, and more—delivered by a local, family‑owned team.
+          We show up when promised, leave your property spotless, and keep communication simple.
+        </p>
+        <div class="pillrow">
+          <span class="pill">Locally Owned</span>
+          <span class="pill">On‑Time Guarantee</span>
+          <span class="pill">Meticulous Cleanup</span>
+          <span class="pill">Easy Online Scheduling</span>
         </div>
-
         <div class="cta">
           <a class="btn primary" href="tel:+12673977850">📞 (267) 397‑7850</a>
           <a class="btn" href="sms:+12673977850">💬 Text Us</a>
           <a class="btn" href="mailto:info@twinoaksods.com">✉️ info@twinoaksods.com</a>
           <a class="btn" href="/twin-oaks.vcf" download>📇 Save Contact</a>
         </div>
+        <p class="small" style="margin-top:10px;color:#7b6a57">
+          Transparency note: not state‑licensed as a contractor; focused on routine lawn & property maintenance.
+        </p>
+      </div>
 
-        <div class="info">
-          <div class="ibox"><strong>Hours</strong><br>Mon–Sat 8am–6pm</div>
-          <div class="ibox"><strong>Service Area</strong><br>Lower & Central Bucks County</div>
-          <div class="ibox"><strong>Estimates</strong><br>Free • Same‑day available • Referral discounts</div>
+      <aside class="heroCard">
+        <div class="heroGrid">
+          <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=1200&auto=format&fit=crop" alt="Freshly cut lawn">
+          <img src="https://images.unsplash.com/photo-1441123285228-1448e608f3d5?q=80&w=1200&auto=format&fit=crop" alt="Garden path with beds">
+          <img src="https://images.unsplash.com/photo-1518730377618-5a97f1e7652f?q=80&w=1200&auto=format&fit=crop" alt="Stonework and shrubs">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop" alt="Trees and lawn">
         </div>
-      </section>
-      <aside>
-        <div class="card" aria-label="Project images">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop" alt="Green landscaped yard with trees" />
-        </div>
-        <div class="grid">
-          <div class="card"><img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=1200&auto=format&fit=crop" alt="Freshly cut lawn" /></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1441123285228-1448e608f3d5?q=80&w=1200&auto=format&fit=crop" alt="Backyard garden path" /></div>
-          <div class="card"><img src="https://images.unsplash.com/photo-1518730377618-5a97f1e7652f?q=80&w=1200&auto=format&fit=crop" alt="Stonework and shrubs" /></div>
+        <div class="heroNote">
+          Free same‑day estimates • Referral discounts • Mon–Sat 8am–6pm
         </div>
       </aside>
-    </main>
+    </section>
 
-    <section class="container" style="padding-top:10px">
-      <h2>What neighbors say</h2>
+    <!-- ====== GREEN STRIP (CTA) ====== -->
+    <div class="strip" role="region" aria-label="Fast estimate">
+      <div>
+        <div style="font-weight:800;font-size:18px;letter-spacing:.2px">Need a fast estimate?</div>
+        <div style="opacity:.9">Call or text and we’ll quote the same day for most residential work.</div>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="/twin-oaks.vcf" download>📇 Save Contact</a>
+        <a class="btn primary" href="tel:+12673977850">Call Now</a>
+      </div>
+    </div>
+
+    <!-- ====== SERVICES ====== -->
+    <section id="services" class="section">
+      <h2 style="margin:.2rem 0 1rem;color:#23311b">Services</h2>
+      <div class="cards">
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 17h18M5 13h14M7 9h10M9 5h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Weekly Lawn Cutting</h3>
+          <p>Consistent, clean lines for homes & commercial sites—set it and forget it.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 10l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Tree Care</h3>
+          <p>Trimming, light cutting, and maintenance to keep canopies healthy and safe.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M6 10h12M4 14h16M2 18h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Seasonal Cleanups</h3>
+          <p>Fall & spring cleanup, leaf removal, haul‑away—meticulous from curb to beds.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 20l4-8 4 3 8-11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Beds & Mulch</h3>
+          <p>Mulch, rock, edging, garden beds, hedge trimming, weeding—detail that shows.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M6 9h12M9 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3>Snow Removal</h3>
+          <p>Reliable clearing for driveways & small lots through the winter months.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 18l8-12 8 12H4z" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Hardscaping (via partner)</h3>
+          <p>Patios & paths delivered with trusted subcontractors—single point of contact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== TESTIMONIAL ====== -->
+    <section class="section">
+      <h2 style="margin:.2rem 0 1rem;color:#23311b">What neighbors say</h2>
       <blockquote>
-        “They arrived exactly when promised, left our yard spotless, and the attention to detail was obvious. We signed up for weekly service on the spot.”
+        “They arrived exactly when promised, left our yard spotless, and the attention to detail was obvious.
+        We signed up for weekly service right away.”
         <br>— <strong>Kelly R., Yardley</strong>
       </blockquote>
     </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="section">
+      <h2 style="margin:.2rem 0 1rem;color:#23311b">Contact</h2>
+      <div class="cards" style="grid-template-columns:2fr 1fr">
+        <div class="card">
+          <h3 style="margin-top:0">Call, text, or email</h3>
+          <p class="small" style="margin:6px 0 12px">Mon–Sat 8am–6pm • Lower & Central Bucks County</p>
+          <div class="cta">
+            <a class="btn primary" href="tel:+12673977850">📞 (267) 397‑7850</a>
+            <a class="btn" href="sms:+12673977850">💬 Text Us</a>
+            <a class="btn" href="mailto:info@twinoaksods.com">✉️ info@twinoaksods.com</a>
+            <a class="btn" href="/twin-oaks.vcf" download>📇 Save Contact</a>
+          </div>
+        </div>
+        <div class="card" style="display:grid;place-items:center;background:linear-gradient(165deg,#fff,#faf7f1)">
+          <img src="/assets/qr-site.svg" alt="QR to Twin Oaks Landscaping website" width="140" onerror="this.style.display='none'">
+          <div class="small" style="margin-top:6px">Scan to save our contact</div>
+        </div>
+      </div>
+    </section>
+
     <footer>
-      © <span id="y"></span> Twin Oaks Landscaping ·
-      <a href="/twin-oaks.vcf" download>📇 Save Contact</a> ·
-      <a href="tel:+12673977850">(267) 397‑7850</a> ·
-      <a href="mailto:info@twinoaksods.com">info@twinoaksods.com</a> · Bucks County, PA
+      <div class="footRow">
+        © <span id="y"></span> Twin Oaks Landscaping ·
+        <a href="/twin-oaks.vcf" download>📇 Save Contact</a> ·
+        <a href="tel:+12673977850">(267) 397‑7850</a> ·
+        <a href="mailto:info@twinoaksods.com">info@twinoaksods.com</a> · Bucks County, PA
+      </div>
+      <div class="small">Twin Oaks Landscaping — professional lawn care & property maintenance. Not state‑licensed for contracting.</div>
     </footer>
   </div>
 
