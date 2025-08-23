@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://twinoaksods.com/sitemap.xml
